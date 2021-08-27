@@ -9,4 +9,130 @@
 html,
 body {
 	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+ul, li {
+	list-style: none;
+}
+.header {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	position: relative;
+}
+.container {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.header__wrapper {
+	position: relative;
+	z-index: 3;
+}
+.header__bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+.header__bg video{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.header__bg::after {
+	content: '';
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.header__title {
+	color: orange;
+	font-weight: 500;
+	font-size: 64px;
+	text-align: center;
+	margin-bottom: 60px;
+	margin-top: 30px;
+}
+.header__title span {
+	color: purple;
+}
+.header__inner {
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+}
+.header__item-1 {
+	max-width: 50%;
+	width: 100%;
+	padding-top: 39%;
+	position: relative;
+}
+.header__item-1 img {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	object-fit: contain;
+	object-position: center top;
+}
+.header__item-2 {
+	max-width: calc(50% - 30px);
+	width: 100%;
+	margin-left: 30px;
+}
+.header__item-list {
+	font-size: 20px;
+}
+.header__item-list li {
+	position: relative;
+	line-height: 24px;
+	padding-left: 20px;
+	color: #fff;
+}
+.header__item-list li::before {
+	content: '';
+	width: 9px;
+	height: 9px;
+	position: absolute;
+	background-color: purple;
+	top: 5px;
+	left: 0;
+	border-radius: 50%;
+}
+.header__item-list li + li {
+	margin-top: 20px;
+}
+.header__form-btn {
+	margin-top: 60px;
+	text-align: center;
+}
+.header__form-btn button{
+	background-color: purple;
+	border-radius: 20px;
+	padding: 10px 25px;
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	animation-name: formbtn;
+	animation-duration: 2s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+@keyframes formbtn {
+	from {
+		transform: scale(1.0);
+	}
+	to {
+		transform: scale(1.1);
+	}
 }
