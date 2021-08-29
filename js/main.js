@@ -2,14 +2,25 @@ const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
   loop: true,
-  slidesPerGroup: 3,
-  slidesPerView: 3,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
   autoHeight: true,
   spaceBetween: 20,
 
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
+  },
+
+  breakpoints: {
+    980: {
+      slidesPerGroup: 3,
+      slidesPerView: 3
+    },
+    640: {
+      slidesPerGroup: 2,
+      slidesPerView: 2
+    }
   }
 });
 
@@ -60,7 +71,7 @@ document.oninput = function() {
     input.value = input.value.replace (/[^\+\d]/g, '');
 }
 
-// scroll form (если бы было много форм, написал бы через поиск атрибутов, для нахождения определенной формы)
+// scroll form
 
 let scrollForm = document.querySelectorAll('.form-btn')
 let form = document.querySelector('.form')

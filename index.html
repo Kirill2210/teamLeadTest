@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 	
@@ -244,14 +245,19 @@
 						<img src="images/prod.png" alt="product">
 					</div>
 					<div class="footer__price">
-						<span class="old__price">1999</span>
-						<span class="new__price">1500</span>
+						<span class="old__price">1999</span>руб. <span class="new__price">1500</span>руб.
 					</div>
 				</div>
 				<div class="footer__box-right">
 					<form class="form" action="" method="">
-						<input type="text" placeholder="Имя">
-						<input type="text" placeholder="Телефон" class="number-input">
+						<div class="form__input">
+							<input type="text" id="name" placeholder="Имя">
+							<label for="name">Иван Иванов</label>
+						</div>
+						<div class="form__input">
+							<input type="text" id="phone" placeholder="Телефон" class="number-input">
+							<label for="phone">+71111111111</label>
+						</div>
 						<button type="submit">Заказать</button>
 					</form>
 				</div>
