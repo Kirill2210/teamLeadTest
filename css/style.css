@@ -56,7 +56,7 @@ ul, li {
 	position: relative;
 	z-index: 3;
 }
-.header__title {
+.header__title, .footer__title {
 	color: orange;
 	font-weight: 500;
 	font-size: 64px;
@@ -64,7 +64,7 @@ ul, li {
 	margin-bottom: 60px;
 	margin-top: 30px;
 }
-.header__title span {
+.header__title span, .footer__title span {
 	color: purple;
 }
 .header__inner {
@@ -114,11 +114,11 @@ ul, li {
 .header__item-list li + li {
 	margin-top: 20px;
 }
-.header__form-btn {
+.form-btn {
 	margin-top: 60px;
 	text-align: center;
 }
-.header__form-btn button{
+.form-btn button{
 	background-color: purple;
 	border-radius: 20px;
 	padding: 10px 25px;
@@ -262,11 +262,155 @@ ul, li {
 
 /* feedback end */
 
+/* promo start */
+
+.promo {
+	background: linear-gradient(to right, #800080, #ffc0cb);
+	padding: 60px 0;
+}
+.promo__box {
+	display: flex;
+	justify-content: space-between;
+}
+.promo__box-left {
+	max-width: 50%;
+	width: 100%;
+}
+.promo__box-left img {
+	width: 100%;
+	height: auto;
+}
+.promo__box-right {
+	margin-left: 20px;
+	max-width: 50%;
+	width: 100%;
+	color: #fff;
+	font-size: 20px;
+}
+.promo__list {
+	margin-top: 40px;
+}
+.promo__list ul {
+	display: flex;
+	justify-content: space-between;
+	font-size: 24px;
+	color: #fff;
+}
+
+/* promo end */
+
+/* footer start */
+
+.footer {
+	padding-top: 15px;
+	padding-bottom: 60px;
+	background: linear-gradient(to right, #20002c, #cbb4d4);
+}
+.countdown {
+  color: #fff;
+  display: block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.countdown-number {
+  padding: 10px;
+  border-radius: 3px;
+  background: #00bf96;
+  display: inline-block;
+}
+.countdown-time {
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816a;
+  display: inline-block;
+}
+.countdown-text {
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+}
+.footer__box {
+	display: flex;
+	margin-left: -20px;
+}
+.footer__box-left, .footer__box-right {
+	max-width: calc(50% - 20px);
+	width: 100%;
+	margin-left: 20px;
+}
+.footer__product {
+	height: 250px;
+	text-align: center;	
+}
+.footer__product img {
+	height: 100%;
+}
+.footer__price {
+	text-align: center;
+	margin-top: 30px;
+	color: #fff;
+}
+.footer__price .old__price {
+	text-decoration: line-through;
+	font-size: 24px;
+	display: inline-block;
+}
+.footer__price .new__price {
+	color: red;
+	display: inline-block;
+	font-size: 56px;
+	animation-name: newprice;
+	animation-duration: 1s;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+}
+.footer__box-right {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 20px;
+	padding: 20px;
+	box-shadow: 3px 3px 15px #000;
+}
+.form input{
+	display: block;
+	background-color: transparent;
+	border: 2px solid purple;
+	width: 100%;
+	padding: 10px;
+	border-radius: 20px;
+	margin-bottom: 20px;
+	outline: none;
+}
+.form button {
+	margin: 0 auto;
+	display: block;
+	font-size: 24px;
+	padding: 10px 25px;
+	border-radius: 20px;
+	background-color: purple;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/* footer end */
+
+
+/* animation */
+
 @keyframes formbtn {
 	from {
 		transform: scale(1.0);
 	}
 	to {
 		transform: scale(1.1);
+	}
+}
+@keyframes newprice {
+	from {
+		transform: rotate(5deg);
+	}
+	to {
+		transform: rotate(-5deg);
 	}
 }
